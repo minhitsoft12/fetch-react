@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/fetch-react/static/css/main.4a331c5f.chunk.css",
+    "main.js": "/fetch-react/static/js/main.68b0f679.chunk.js",
+    "main.js.map": "/fetch-react/static/js/main.68b0f679.chunk.js.map",
+    "runtime-main.js": "/fetch-react/static/js/runtime-main.3f11aa15.js",
+    "runtime-main.js.map": "/fetch-react/static/js/runtime-main.3f11aa15.js.map",
+    "static/js/2.0d816647.chunk.js": "/fetch-react/static/js/2.0d816647.chunk.js",
+    "static/js/2.0d816647.chunk.js.map": "/fetch-react/static/js/2.0d816647.chunk.js.map",
+    "static/js/3.1a3f8e47.chunk.js": "/fetch-react/static/js/3.1a3f8e47.chunk.js",
+    "static/js/3.1a3f8e47.chunk.js.map": "/fetch-react/static/js/3.1a3f8e47.chunk.js.map",
+    "index.html": "/fetch-react/index.html",
+    "static/css/main.4a331c5f.chunk.css.map": "/fetch-react/static/css/main.4a331c5f.chunk.css.map",
+    "static/js/2.0d816647.chunk.js.LICENSE.txt": "/fetch-react/static/js/2.0d816647.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/fetch-react/static/media/sidebaroptin.38957ca0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f11aa15.js",
+    "static/js/2.0d816647.chunk.js",
+    "static/css/main.4a331c5f.chunk.css",
+    "static/js/main.68b0f679.chunk.js"
+  ]
+}
