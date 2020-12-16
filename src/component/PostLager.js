@@ -24,7 +24,7 @@ const PostLager = ({ articles, loading, time, search }) => {
                         <div key={index} className="post-preview clearfix">
                             {/* <div data-mh="post-preview-group" className="thumbnail jpibfi_container" style={{ height: '204px' }} dangerouslySetInnerHTML={{ __html: article.content }}/> */}
                             <div data-mh="post-preview-group" className="thumbnail jpibfi_container" >
-                                <a href={article.link}><img width={320} src={article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></a>
+                                <a href={article.link}><span><img width={320} src={article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></span></a>
                             </div>
                             <div data-mh="post-preview-group" className="info">
                                 <p className="post-meta">{article.pubDate} <span className="sep">•</span> <a href="https://www.eatyourselfskinny.com/hot-italian-sliders/#respond">0 Comments</a></p>
@@ -74,7 +74,7 @@ const PostLager = ({ articles, loading, time, search }) => {
                         <div key={inx} className="post-preview clearfix">
                         {/* <div data-mh="post-preview-group" className="thumbnail jpibfi_container" style={{ height: '204px' }} dangerouslySetInnerHTML={{ __html: article.content }}/> */}
                         <div data-mh="post-preview-group" className="thumbnail jpibfi_container" >
-                            <a href={art.link}><img width={320} src={art.content.slice(art.content.indexOf('<img src="') + 10, art.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></a>
+                            <a href={art.link}><span><img width={320} src={art.content.slice(art.content.indexOf('<img src="') + 10, art.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></span></a>
                         </div>
                         <div data-mh="post-preview-group" className="info">
                             <p className="post-meta">{art.pubDate} <span className="sep">•</span> <a href="https://www.eatyourselfskinny.com/hot-italian-sliders/#respond">0 Comments</a></p>
@@ -89,17 +89,17 @@ const PostLager = ({ articles, loading, time, search }) => {
                 </div>
             ) : (<div className="alert-notfond">Nothing Found</div>);
         } else {
-            const postAdd = [];
+            let postAd = [];
             for(let i = 0; i < 20; i++) {
-                postAdd.push(articles.feed.entries[i]);
+                postAd.push(articles.feed.entries[i])
             }
             return (
                 <div className="post-wrap">
-                    {postAdd.map((article, index) => (
+                    {postAd.map((article, index) => (
                         <div key={index} className="post-preview clearfix">
                             {/* <div data-mh="post-preview-group" className="thumbnail jpibfi_container" style={{ height: '204px' }} dangerouslySetInnerHTML={{ __html: article.content }}/> */}
                             <div className="thumbnail jpibfi_container" >
-                                <a href={article.link}><img width={320} src={article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></a>
+                                <a href={article.link}><span><img width={320} src={article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></span></a>
                             </div>
                             <div data-mh="post-preview-group" className="info">
                                 <p className="post-meta">{article.pubDate} <span className="sep">•</span> <a href="https://www.eatyourselfskinny.com/hot-italian-sliders/#respond">0 Comments</a></p>
