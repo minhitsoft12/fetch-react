@@ -89,9 +89,13 @@ const PostLager = ({ articles, loading, time, search }) => {
                 </div>
             ) : (<div className="alert-notfond">Nothing Found</div>);
         } else {
+            const postAdd = [];
+            for(let i = 0; i < 20; i++) {
+                postAdd.push(articles.feed.entries[i]);
+            }
             return (
                 <div className="post-wrap">
-                    {articles.feed.entries.map((article, index) => (
+                    {postAdd.map((article, index) => (
                         <div key={index} className="post-preview clearfix">
                             {/* <div data-mh="post-preview-group" className="thumbnail jpibfi_container" style={{ height: '204px' }} dangerouslySetInnerHTML={{ __html: article.content }}/> */}
                             <div className="thumbnail jpibfi_container" >
