@@ -196,10 +196,14 @@ header {
             position: absolute;
             top: 15px;
             left: 50%;
-            margin-left: -160px;
+            transform: translateX(-50%);
             background-size: 320px 180px;
-            background-position: 0 0;
-        }
+            background-position: center;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+}
 	}
 }
 
@@ -225,10 +229,9 @@ header {
 
 @media (min-width: 1200px) {
 	header .logo {
-		margin-left: -186px;
 		width: 385px;
 		height: 216px;
-		background-size: 385px 216px;
+		background-size: 339px 205px;
 	}
 }
 

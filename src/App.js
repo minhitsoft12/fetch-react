@@ -19,8 +19,7 @@ const App = () => {
   const [key, setKey] = useState('');
 
   useEffect(() => {
-    
-    const fetchArticles = async () => {
+    const fetchPost = async () => {
       setLoading(true);
       await parser.parseURL(CORS_PROXY + URL, (err, feed) => {
         if (err) throw err;
@@ -28,8 +27,9 @@ const App = () => {
         setLoading(false);
       });
     };
+    fetchPost();
     const interval = setInterval(() => {
-      fetchArticles();
+      fetchPost();
     }, 60000);
     return () => clearInterval(interval);
   }, []);
