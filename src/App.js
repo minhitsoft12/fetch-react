@@ -10,7 +10,7 @@ import Search from './component/Search';
 
 
 const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-const URL = "https://vnexpress.net/rss/suc-khoe.rss";
+const URL = "https://vnexpress.net/rss/tin-moi-nhat.rss";
 
 const App = () => {
   const [articles, setArticles] = useState([]);

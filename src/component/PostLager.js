@@ -13,7 +13,7 @@ const PostLager = ({ articles, loading, time, search }) => {
         setTimeout(function(){ setShows(shows + 5); }, 1300);
     }
     const { start, end } = time;
-    if (articles.feed && !loading) {
+    if (articles.feed) {
         let getImg = articles.feed.entries;
         let linkImg = getImg.map((art) => (art.content.slice(art.content.indexOf('<img src="') + 10, art.content.lastIndexOf('</br>') - 7)));
         if (start != null && end != null) {
