@@ -19,6 +19,7 @@ const App = () => {
   const [key, setKey] = useState('');
 
   useEffect(() => {
+    console.log(articles)
     const fetchPost = async () => {
       setLoading(true);
       await parser.parseURL(CORS_PROXY + URL, (err, feed) => {

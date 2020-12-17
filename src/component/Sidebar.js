@@ -88,7 +88,7 @@ class Sidebar extends Component {
                             return (
                                 <div className="item" key={index}>
                                     <a href={value.link}>
-                                        <span><img src={value.content.slice(value.content.indexOf('<img src="') + 10, value.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image"/></span>
+                                        <span><img src={value.content.indexOf('<img src="') !== -1 ? value.content.slice(value.content.indexOf('<img src="') + 10, value.content.lastIndexOf('</br>') - 7) : 'https://lh3.googleusercontent.com/EbXw8rOdYxOGdXEFjgNP8lh-YAuUxwhOAe2jhrz3sgqvPeMac6a6tHvT35V6YMbyNvkZL4R_a2hcYBrtfUhLvhf-N2X3OB9cvH4uMw=w1064-v0'} className="attachment-thumbnail size-thumbnail wp-post-image"/></span>
                                     </a>
                             <h4><a href={value.link}>{value.title}</a></h4>
                                 </div>

@@ -31,7 +31,7 @@ const PostLager = ({ articles, loading, time, search }) => {
                         <div key={index} className="post-preview clearfix">
                             {/* <div data-mh="post-preview-group" className="thumbnail jpibfi_container" style={{ height: '204px' }} dangerouslySetInnerHTML={{ __html: article.content }}/> */}
                             <div data-mh="post-preview-group" className="thumbnail jpibfi_container" >
-                                <a href={article.link}><span><img width={320} src={article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></span></a>
+                                <a href={article.link}><span><img width={320} src={article.content.indexOf('<img src="') !== -1 ? article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7) : 'https://lh3.googleusercontent.com/EbXw8rOdYxOGdXEFjgNP8lh-YAuUxwhOAe2jhrz3sgqvPeMac6a6tHvT35V6YMbyNvkZL4R_a2hcYBrtfUhLvhf-N2X3OB9cvH4uMw=w1064-v0'} className="attachment-thumbnail size-thumbnail wp-post-image"/></span></a>
                             </div>
                             <div data-mh="post-preview-group" className="info">
                                 <p className="post-meta">{article.pubDate} <span className="sep">•</span> <a href="https://www.eatyourselfskinny.com/hot-italian-sliders/#respond">0 Comments</a></p>
@@ -45,7 +45,7 @@ const PostLager = ({ articles, loading, time, search }) => {
                     ))}
                 </div>
             ) : (
-                    <div className="alert-notfond">Không có bài viết mới</div>
+                    <div className="alert-notfond">Not found</div>
                 );
         } else if (search.length > 0) {
             function change_alias(alias) {
@@ -106,7 +106,7 @@ const PostLager = ({ articles, loading, time, search }) => {
                         <div key={index} className="post-preview clearfix">
                             {/* <div data-mh="post-preview-group" className="thumbnail jpibfi_container" style={{ height: '204px' }} dangerouslySetInnerHTML={{ __html: article.content }}/> */}
                             <div className="thumbnail jpibfi_container" >
-                                <a href={article.link}><span><img width={320} src={article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7)} className="attachment-thumbnail size-thumbnail wp-post-image" /></span></a>
+                                <a href={article.link}><span><img width={320} src={article.content.indexOf('<img src="') !== -1 ? article.content.slice(article.content.indexOf('<img src="') + 10, article.content.lastIndexOf('</br>') - 7) : 'https://lh3.googleusercontent.com/EbXw8rOdYxOGdXEFjgNP8lh-YAuUxwhOAe2jhrz3sgqvPeMac6a6tHvT35V6YMbyNvkZL4R_a2hcYBrtfUhLvhf-N2X3OB9cvH4uMw=w1064-v0'} className="attachment-thumbnail size-thumbnail wp-post-image"/></span></a>
                             </div>
                             <div data-mh="post-preview-group" className="info">
                                 <p className="post-meta">{article.pubDate} <span className="sep">•</span> <a href="https://www.eatyourselfskinny.com/hot-italian-sliders/#respond">0 Comments</a></p>
