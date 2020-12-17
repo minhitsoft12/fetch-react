@@ -5,6 +5,13 @@ import React, { useState, useEffect, Component } from 'react';
 
 
 const PostLager = ({ articles, loading, time, search }) => {
+    const[shows, setShows] = useState(20);
+
+    const handleMore = (e) => {
+        e.preventDefault();
+        
+        setTimeout(function(){ setShows(shows + 5); }, 1300);
+    }
     const { start, end } = time;
     if (articles.feed && !loading) {
         let getImg = articles.feed.entries;
@@ -95,7 +102,7 @@ const PostLager = ({ articles, loading, time, search }) => {
             }
             return (
                 <div className="post-wrap">
-                    {postAd.map((article, index) => (
+                    {articles.feed.entries.slice(0, shows).map((article, index) => (
                         <div key={index} className="post-preview clearfix">
                             {/* <div data-mh="post-preview-group" className="thumbnail jpibfi_container" style={{ height: '204px' }} dangerouslySetInnerHTML={{ __html: article.content }}/> */}
                             <div className="thumbnail jpibfi_container" >
@@ -111,6 +118,9 @@ const PostLager = ({ articles, loading, time, search }) => {
                             </div>
                         </div>
                     ))}
+                    {shows < articles.feed.entries.length &&
+                        <div className="load-more-box"><button onClick={handleMore} type="button" className="btn btn-warning">Load more</button></div>
+                    }
                 </div>
             );
         }
