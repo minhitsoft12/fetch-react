@@ -1,7 +1,8 @@
 repo_name: minhitsoft12/fetch-react
 report_id: 787d264fb28becbbcb513273079f48b1
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-06T03:38:34+00:00'
+timestamp: '2024-01-05T08:28:45+00:00'
 requested_by: minhitsoft12
 provider: github
 branch: gh-pages
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/minhitsoft12/fetch-react
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/minhitsoft12/fetch-react
   detection_source: Repo Metadata
 - name: Ruby
   description: A dynamic, interpreted, open source programming language with a focus
@@ -35,6 +38,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/989/ruby.png
+  detection_source_url: https://github.com/minhitsoft12/fetch-react
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -44,6 +48,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/minhitsoft12/fetch-react
   detection_source: Repo Metadata
 - name: HTML
   description: Hypertext Markup Language for creating web pages.
@@ -51,6 +56,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source_url: https://github.com/minhitsoft12/fetch-react/blob/gh-pages/index.html
   detection_source: index.html
   last_updated_by: minhitsoft
   last_updated_on: 2020-12-17 09:03:53.000000000 Z
